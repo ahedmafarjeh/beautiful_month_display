@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(#14000e,#10001f);
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.main{
+    background: url("stars1.webp");
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main ul{
+    list-style: none;
+   transform: translateY(5%);  
+}
+.main ul li{
+    margin-bottom: 25px;
+  
+}
+
+.main ul:hover  a {
+    opacity: 0;    
+}
+.main ul li a {
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-block;
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px 0;
+    padding-left: 70px;
+    transition: 0.5s;
+    
+}
+
+.main ul li a:hover{
+    transform: scale(1.5);
+    background-color: rgb(151, 74, 74);
+    color: white;
+    opacity: 1;
+    
+}
+
+.main ul li::after{
+    content: attr(text-name);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -70%;
+    font-size: 110px;
+    letter-spacing: 50px;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: -1;
+}
+.main ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 2px;
+   
+    
+}
+.main ul li::before{
+    content: '';
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% 90%;
+    opacity: 0;
+    pointer-events: none;
+}
+.main ul li:hover::before{
+    opacity: 0.5;
+    box-shadow: 0 0 90px white;
+}
